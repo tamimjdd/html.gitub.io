@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+        <style> 
+            
+                html{
+                    background: url("IMAGES/back_main3.jpg") no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+
+
+                .fa {
+                    padding: 10px;
+                    font-size: 20px;
+                    width: 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    margin: 5px 2px;
+                    border-radius: 50%;
+                }
+
+                .fa:hover {
+                    opacity: 0.7;
+                }
+
+                .fa-facebook {
+                    background: #3B5998;
+                    color: white;
+                    position: absolute;
+                    right: 200px;
+                    top: 1700px;
+                }
+
+                .fa-linkedin {
+                    background: #007bb5;
+                    color: white;   
+                    position: absolute;
+                    right: 140px;
+                    top: 1700px;
+                }
+
+                .fa-google {
+                    background: #dd4b39;
+                    color: white;
+                    position: absolute;
+                    right: 80px;
+                    top: 1700px;
+                }
+
+                .fa-youtube {
+                    background: #bb0000;
+                    color: white;
+                    position: absolute;
+                    right: 20px;
+                    top: 1700px;
+                }
+                
+                .sidenav {
+                    height: 100%;
+                    width: 0;
+                    position: fixed;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    background-color: #111;
+                    overflow-x: hidden;
+                    transition: 0.5s;
+                    padding-top: 60px;
+                }
+
+                .sidenav a {
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: #818181;
+                    display: block;
+                    transition: 0.3s;
+                }
+                
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+                
+                .sidenav .closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    font-size: 36px;
+                    margin-left: 50px;
+                }
+
+                #main {
+                    transition: margin-left .5s;
+                    padding: 16px;
+                }
+
+                @media screen and (max-height: 450px) {
+                    .sidenav {padding-top: 15px;}
+                    .sidenav a {font-size: 18px;}
+                }
+
+                body, html {
+                    height: 100%;
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .bg {
+                    /* The image used */
+                    /* Full height */
+                    height: 300%; 
+                    /* Center and scale the image nicely */
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin-top: -.5cm;
+                }
+                
+                #Q1,#Q2,#name,#mail,#comment,#Send,#Reset,#messages,#para1{
+                    color: black;
+                    font-family: 'Oswald', sans-serif;
+                }
+                
+                #headingquota{
+                    color: black;
+                    font-family: 'Bitter', serif;
+                }
+                
+                #profile{
+                    color: rgb(50, 78, 173)
+                }
+
+                *{
+                    box-sizing: border-box;
+                }
+
+                .column {
+                    float: left;
+                    width: 33.33%;
+                    padding: 5px;
+                }
+
+                .column2 {
+                    float: right;
+                    width: 26.33%;
+                    padding: 5px;
+                }
+
+                /* Clearfix (clear floats) */
+                .row::after {
+                    content: "";
+                    clear: both;
+                    display: table;
+                }
+                
+                .container {
+                    position: relative;
+                    text-align: center;
+                    color: white;
+                }
+
+                .bottom-left {
+                    position: absolute;
+                    bottom: 8px;
+                    left: 16px;
+                }
+
+                .top-left {
+                    position: absolute;
+                    top: 8px;
+                    left: 16px;
+                }
+
+                .top-right {
+                    position: absolute;
+                    top: 8px;
+                    right: 16px;
+                }
+
+                .bottom-right {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 16px;
+                }
+
+                .centered {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-110%, +150%);
+                }
+                .centered2 {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, +350%);
+                }
+
+                a:link, a:visited {
+                    background-color: #181616;
+                    color: white;
+                    padding: 14px 25px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                }
+
+
+                a:hover, a:active {
+                    background-color: green;
+                }
+                #messages{
+                    color:white;
+                    transform: translate(10%, +1300%);
+                    font-family: 'Oswald', sans-serif;
+                }
+                #form{
+                    color:white;
+                }
+                .container2 {
+                    position: center;
+                    right: 100px;
+                    margin: 20px;
+                    max-width: 300px;
+                    height: 0;
+                    padding: 16px;
+                    transform: translate(-0%, +900%);
+                  
+                }
+                .btn1 {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 16px 20px;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    opacity: 0.9;
+                }
+
+                .btn1:hover {
+                    opacity: 1;
+                }
+                .btn2 {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 16px 20px;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    opacity: 0.9;
+                }
+
+                .btn2:hover {
+                    opacity: 1;
+                }
+                #froala-editor{
+                    width: 7.1cm;
+                    height: 1.5cm;
+                }
+                * {
+                    box-sizing: border-box;
+                }
+                input[type=text]{
+                    width: 100%;
+                    padding: 15px;
+                    margin: 5px 0 22px 0;
+                    border: none;
+                    background: #f1f1f1;
+                }
+
+                input[type=text]:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+                
+                .new_btn{
+                    background-color: Transparent;
+                    background-repeat:no-repeat;
+                    border: none;
+                    cursor:pointer;
+                    overflow: hidden;
+                    outline:none;
+                    color: #16DF77;
+                    font-family: 'Oswald', sans-serif;
+                    position: absolute;
+                    right: -80px;
+                    top: 1400px;
+                }
+                #visitor{
+                    color: #16DF77;
+                    font-family: 'Oswald', sans-serif;
+                }
+
+        </style>
+    </head>
+    
+    <body  onloadstart="setUserName()">
+        
+        <div class="bg">  
+            <p id="para1" align="right">
+                    <b><a href="ABOUT.html">ABOUT</a></b> &nbsp&nbsp <b><a href="EDUCATION.html">EDUCATION</a></b> &nbsp&nbsp <b><a href="LEISURE WORKS.html">LEISURE WORKS</a></b> &nbsp&nbsp <b><a href="ACHIVEMENTS.html">ACHIVEMENTS</a></b> &nbsp&nbsp <b><a href="OCCUPATION.html">OCCUPATION</a></b> &nbsp&nbsp <b><a href="Special Skills.html">SPECIAL SKILLS</a></b> &nbsp&nbsp <b><a href="#messages" >MESSAGE</a></b>        
+            </p>
+
+
+            <div class="container">
+                    
+                <div class="column">
+                    <img src="IMAGES/bak2.png" alt="Snow" width="1345" height="468"  >
+                </div>
+                <div class="centered">
+                    <h1 id="headingquota">
+                        <b>
+                            TAMIM WASIF
+                        </b>
+                    </h1>
+
+                    <p id="Q1">
+                        Not everything is for enjoyment,Sometimes it's good to do a sacrifice!
+                    </p>
+                    <p>
+                        <button type="submit" class="new_btn" onclick="setUserName()">Change Quota</button>
+                    </p>
+
+                </div>
+                
+                <div class="column2">
+                    <img src="IMAGES/fire2.jpg" alt="Forest" width="-1000" height="468" >
+                </div>
+
+                <div >
+                    <a href="https://www.facebook.com/logan.hakathon?ref=bookmarks" class="fa fa-facebook"></a>
+                    <a href="https://www.linkedin.com/in/tamim-wasif-72b453158/" class="fa fa-linkedin"></a>
+                    <a href="https://myaccount.google.com/?utm_source=OGB&tab=wk&utm_medium=act" class="fa fa-google"></a>
+                    <a href="https://www.youtube.com/channel/UCEX3BfAnJMi0mmpQI60UIDA?view_as=subscriber" class="fa fa-youtube"></a>
+                </div>
+            </div>
+            
+            <div class="centered2">
+                <p id="messages">
+                    <b>
+                        MESSAGE
+                    </b>
+                </p>
+                
+                <p id="messages">
+                   <b id="visitor">name</b> send message to Tamim!
+                </p>
+
+                <form action="mailto:deviltamim88@gmail.com" method="post" enctype="text/plain" id="form" class="container2">
+                    
+                    Name:<br>
+                    <input id="name" type="text"  name="name"  size="50" required><br>
+                    E-mail:<br>
+                    <input type="text" name="mail" id="mail" size="50" required><br>
+                    Comment:<br>
+                    <textarea id="froala-editor">type your message here</textarea><br>
+                    <input type="submit" class="btn1" value="Send" id="Send">
+                    <br>
+                    <input type="reset" class="btn2" value="Reset" id="Reset">
+                </form>
+            </div>
+        </div>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+        
+
+
+        <script>
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "250px";
+                  document.getElementById("main").style.marginLeft = "250px";
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                  document.getElementById("main").style.marginLeft= "0";
+                }
+
+                var myButton = document.querySelector('button');
+                var myHeading = document.getElementById('visitor');
+                
+                function setUserName() {
+                    var myName = prompt('Welcome, please enter your name');
+                    localStorage.setItem('name', myName);
+                    myHeading.textContent = '' + myName;
+                }
+                function setUserName2() {
+                    var myName = prompt('Enter your name again');
+                    localStorage.setItem('name', myName);
+                    myHeading.textContent = '' + myName;
+                }
+
+                if(!localStorage.getItem('name')) {
+                    setUserName();
+                } else {
+                    var storedName = localStorage.getItem('name');
+                    myHeading.textContent = '' + storedName;
+                }
+
+                myButton.onclick = function() {
+                    setUserName2();
+                }
+
+        </script>
+        
+
+    </body>
+</html>

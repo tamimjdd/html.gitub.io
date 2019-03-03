@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+
+            .dropdown-btn,.dropdown-btn2 {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 15px;
+                color: #818181;
+                display: block;
+                border: none;
+                background: none;
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+                outline: none;
+            }
+
+            .dropdown-container,.dropdown-container2 {
+                display: none;
+                background-color: #262626;
+                padding-left: 8px;
+            }
+
+            .dropdown-btn:hover,.dropdown-btn2:hover {
+                color: #f1f1f1;
+            }
+
+            /* Optional: Style the caret down icon */
+            .fa-caret-down,.fa-caret-down2 {
+                float: right;
+                padding-right: 8px;
+            }
+
+            .dropdown-btn{
+                    color:white;
+                    font-family: 'Oswald', sans-serif;
+            }
+
+            #mySidenav,#main{
+                    color: black;
+                    font-family: 'Oswald', sans-serif;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 4px 4px 4px 16px;
+                text-decoration: none;
+                font-size: 15px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 16px;
+                margin-left: 50px;
+            }
+
+            #main {
+                transition: margin-left .5s;
+                padding: 16px;
+                background-color:cadetblue;
+            }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+
+            .bg2 {
+                background-image: url("IMAGES/back_main3.jpg");  
+                height: 5000%; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color:cornsilk;
+                margin-top: -.5cm;
+            }
+            ul{
+                color:cornsilk;
+                font-family: 'Oswald', sans-serif;
+            }
+            #logo{
+                
+                border-radius: 50%;
+                transform: translate(0%, -50%);
+            }
+            #prof{
+                color:white;
+                font-family: 'Bitter', serif;
+            }
+            #black{
+                color:black;
+            }
+
+            
+           
+        </style>
+    </head>
+    <body>
+
+            <div id="mySidenav" class="sidenav">
+                    <div >
+                            <a href="index2.html">
+                                <p id="prof">   
+                                <img id="logo" src="IMAGES/ts2.jpg"  style="float:left;width:50px;height:60px;" alt="asfd" style="width:80px"> 
+                                &nbsp&nbsp TAMIM WASIF 
+                                </p>
+                            </a>
+                        </div>
+                    <a id="black" href="#">&nbsp&nbsp</a>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="index2.html">HOME</a>
+                    <a href="ABOUT.html">ABOUT</a>
+                    <a href="EDUCATION.html">EDUCATION</a>
+                    <a href="ACHIVEMENTS.html">ACHIVEMENTS</a>
+                    <a href="OCCUPATION.html">OCCUPATION</a>
+                    <a href="Special Skills.html">SPECIAL SKILLS</a>
+                    <a href="index2.html#messages">MESSAGE</a>
+                    <button class="dropdown-btn">SOCIAL MEDIA 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        <a href="https://www.linkedin.com/in/tamim-wasif-72b453158/">Linkedin</a>
+                        <a href="https://www.facebook.com/logan.hakathon?ref=bookmarks">Facebook</a>
+                    </div>
+            </div>
+
+            <script>
+                    function openNav() {
+                      document.getElementById("mySidenav").style.width = "250px";
+                      document.getElementById("main").style.marginLeft = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidenav").style.width = "0";
+                      document.getElementById("main").style.marginLeft= "0";
+                    }
+            </script>
+
+            <script>
+                /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+        
+                for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === "block") {
+                            dropdownContent.style.display = "none";
+                        } else {
+                            dropdownContent.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+            </div>
+
+            <div class="bg2" align="center" >
+                <ul>
+                    <li>   
+                        <b>
+                            EXERCISE
+                        </b>                 
+                    </li>
+                    <div class="column1" id="div1">
+                        <a href="https://www.youtube.com/watch?v=W6jMK5yF9gA" id="exercise2">
+                            <img id="exercise" src="IMAGES/exercise.jpg" alt="Snow" width="500" height="468"  onmouseover="first()" onmouseout="first()">
+                        </a>
+                    </div>
+                    <li>   
+                        <b>
+                            PRAYER
+                        </b>    
+                    </li>
+                    <div class="column" >
+                            <img src="IMAGES/namaj.jpg" alt="Snow" width="500" height="468"  >
+                    </div>
+                    <li>   
+                        <b>
+                            HOLY QURAN READING
+                        </b> 
+                    </li>
+                    <div class="column">
+                            <img src="IMAGES/quran.jpg" alt="Snow" width="500" height="468"  >
+                            
+                    </div>
+                    <li>   
+                        <b>
+                            FACEBOOKING
+                        </b> 
+                    </li>
+                    <div class="column">
+                            <img src="IMAGES/fb.png" alt="Snow" width="500" height="468"  >
+                    </div>
+                    <li>   
+                        <b>
+                            NEWS READING
+                        </b> 
+                    </li>
+                    <div class="column">
+                            <img src="IMAGES/news.jpg" alt="Snow" width="500" height="468"  >
+                    </div>
+                </ul>
+            </div>
+            <script>
+                    // jQuery
+                    function first() {
+                        var myImage = document.querySelector('img#exercise');
+                        var mySrc = myImage.getAttribute('src');
+                        if(mySrc === 'IMAGES/exercise.jpg') {
+                            myImage.setAttribute ('src','IMAGES/exercise3.png');
+                            
+                            var myImage2 = document.querySelector('img#exercise2');
+                            var mySrc2 = myImage2.getAttribute('href');
+                            myImage2.setAttribute ('href','https://www.youtube.com/watch?v=W6jMK5yF9gA');
+                        } 
+                        else {
+                            myImage.setAttribute ('src','IMAGES/exercise.jpg');
+                        }
+                    }  
+            </script>
+    </body>
+</html>

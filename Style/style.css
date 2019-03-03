@@ -1,0 +1,19 @@
+li {
+    line-height: 1.5;
+}
+img{
+    margin-left: 38%;   
+}
+.multi-bg-example {
+    width: 100%;
+    height: 400px;
+    background-image: url(Images\pink-color-background-hd-1920x1080-145508.jpg),
+        url(Images\bak2.png),
+        linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    background-repeat: no-repeat,
+        no-repeat,
+        no-repeat;
+    background-position: bottom right,
+        left,
+        right;
+}

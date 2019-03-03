@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <div class="column">
+            <img id="schoolimg" src="images/school.jpg" alt="Snow" width="1150" height="468" onclick="first()">
+            </div>
+            <div class="column">
+                    <img src="images/college.jpg" id="collegeimg" alt="Snow" width="1150" height="468"  onclick="second()">
+            </div>
+        </div>
+        <script>
+            function first() {
+                var myImage = document.querySelector('img#schoolimg');
+                var mySrc = myImage.getAttribute('src');
+                if(mySrc === 'images/school.jpg') {
+                myImage.setAttribute ('src','images/school2.jpg');
+                } else {
+                myImage.setAttribute ('src','images/school.jpg');
+                }
+            }
+        
+             function second() {
+                    var myImage2 = document.querySelector('img#collegeimg');
+                    var mySrc2 = myImage2.getAttribute('src');
+                    if(mySrc2 === 'images/college.jpg') {
+                    myImage2.setAttribute ('src','images/college2.jpg');
+                    } else {
+                    myImage2.setAttribute ('src','images/college.jpg');
+                    }
+                }
+        </script>
+    </body>
+</html>
