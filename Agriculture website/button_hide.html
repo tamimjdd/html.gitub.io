@@ -1,0 +1,64 @@
+<html>
+<head>
+
+<style>
+
+.hidden-div {
+    display:none;
+  
+}
+#reform{
+    transition: 100.8s;
+}
+.btn{
+  border: 1px solid green;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 100.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+#show_button{
+    transition: 100.8s;
+
+}
+</style>
+
+</head>
+<body>
+<div class="reform">
+    <form id="reform" action="action.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="type" value="" />
+        <fieldset>
+            content here...
+        </fieldset>
+
+    <div class="hidden-div" id="hidden-div">
+            
+            <div class="container">
+                    <button class="btn btn1">Farmer</button>
+            </div>
+        
+        </form>
+    </div>
+            <span style="display:block; padding-left:640px; margin-top:10px;">
+                <button id="show_button">Check Availability</button>
+        </span>
+</div>
+    
+<script type="text/javascript">
+    document.getElementById('show_button').addEventListener('click',hideshow,false);
+    
+    function hideshow() {
+        document.getElementById('hidden-div').style.display = 'block'; 
+        this.style.display = 'none'
+    }
+        
+</script>
+</body>
+</html>
